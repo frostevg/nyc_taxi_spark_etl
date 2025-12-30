@@ -1,1 +1,7 @@
-# nyc_taxi_spark_etl
+This is my NYC Taxi Spark ETL project. I built it to practice real data engineering using a public dataset of taxi trips in New York. The idea is simple: take raw data, clean it, transform it, and load it into a database so I can run queries later or build dashboards. I wanted to work on something real, not just small CSV samples, so this project helps me learn how to deal with messy, large data and use Spark in a practical way.
+
+The pipeline reads NYC taxi trip files, handles missing values, fixes data types, filters out broken rows, and creates useful features like trip distance, total cost, and time of day. After processing, the cleaned data is saved as Parquet or CSV and then loaded into a PostgreSQL database. I run everything locally using Python, Spark, and Docker, which makes the project easy to start and shut down whenever needed. It also prepares me for building ETL pipelines in the cloud later.
+
+To run it, you clone the repo, install the requirements, start Docker, and execute the Python scripts for ingestion, transformation, and loading. This project is mainly for learning and for my portfolio, but in the future I may add Airflow scheduling, dashboards with Tableau or Power BI, and move the storage to S3 so it looks more production-like. For now, it is a clean example of an end-to-end ETL workflow using Spark.
+
+Thanks for taking a look at my project. I hope it shows my progress in data engineering and that it becomes a useful piece of my portfolio.
